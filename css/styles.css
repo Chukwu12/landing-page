@@ -26,6 +26,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Inter', Arial, sans-serif; 
 }
 
 
@@ -36,18 +37,21 @@ header {
 
 }
 
-footer {
 
-}
 
 p{
     font-size: 1.2rem;
     font-weight: 500;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, serif; /* Serif font for headings */
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+/* Particle background */
 #particles-js{
     position:fixed;
     z-index: -1;
@@ -58,15 +62,83 @@ background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-2
 background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/* Container adjustments */
 .usa-container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+    text-align: center;  
+    padding: 20px;  
+    height: 100vh;  
 }
 
+/* Typography*/
 .usa-lead{
     font-size: 1.5rem;
     font-weight: 500;
+    color: white;
 }
+
+.usa-text {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.usa-lead, .usa-text, .usa-display-xl {
+    color: white; 
+}
+
+.usa-display-xl{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Button */
+.usa-text .custom-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.usa-button {
+    background-color: #0071bc;  
+    color: white;               
+    padding: 0.5rem 1.25rem;    
+    border-radius: 0.25rem;     
+    border: 2px solid #0071bc; 
+    text-decoration: none;     
+    font-weight: bold;          
+    text-align: center;        
+    display: inline-block;     
+    transition: background-color 0.3s ease, border-color 0.3s ease;   
+}
+
+/* Button Hover Effect */
+.usa-button:hover {
+    background-color: #005b99;  
+    border-color: #005b99;      
+}
+
+/* Optional: Focus Style */
+.usa-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 113, 188, 0.4); 
+}
+
+
+@media (max-width: 768px) {
+    #particles-js {
+        opacity: 0.5; 
+    }
+    .usa-display-xl {
+        font-size: 2.5rem; 
+    }
+}
+
